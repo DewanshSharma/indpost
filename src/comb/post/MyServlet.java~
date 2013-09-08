@@ -6,9 +6,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServlet;
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 /**
- *Fetches the data from deliveryinfo.jsp and sends to success.jsp 
- * @author Dewansh
+ *
+ * @author Dev
  */
 public class MyServlet extends HttpServlet{
     @Override

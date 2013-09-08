@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%-- 
     Document   : success
     Created on : Aug 30, 2013, 9:38:03 AM
-    Author     : Dev
+    Author     : Dewansh
 --%>
 <html>
 <head>
@@ -57,7 +57,7 @@ lable{
 <Img src="images/logo.jpg"/>
 </div>
 <div id="form"  >
-
+Your request has been submitted successfully<p></p>
 <table>
 <tr><td id="a">Your Name</td> 
 <td><%out.println(request.getParameter("fname"));

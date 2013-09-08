@@ -2,7 +2,7 @@
 <%-- 
     Document   : register.jsp
     Created on : Aug 30, 2013, 9:30:05 AM
-    Author     : Dev
+    Author     : Dewansh
 --%>
 <!DOCTYPE html>
 <html>
@@ -11,8 +11,7 @@
 body{
 	width:900px;
 	margin:10px auto;
-	background: #2781BA ;   
-	     
+	background: #2781BA;   
 }
 div#header{
 	background:white;
@@ -29,7 +28,7 @@ input{
 input#submit{
 	width:100px;
 }
-img#aa,#ba{
+img#logo{
 	
 	visibility:visible;
 }
@@ -43,6 +42,7 @@ label{
 </style>
 <script>
 var c=0;
+/* Empty field check */
 function myFunction(x,y,z)
 {
 if(x.value.length==0){
@@ -53,14 +53,15 @@ if(x.value.length==0){
 	
 	}
 else{
-	x.value=x.value[0].toUpperCase()+x.value.substring(1,x.value.length).toLowerCase();
+	x.value=x.value[0].toUpperCase()+x.value.substring(1,x.value.length).toLowerCase(); //String formating
 	c=c+1;
 	y.innerHTML="";
 	z.style.visibility = 'visible';
-	if(c>=5)
+	if(c>=5)																//if all the field fill enable 'submit' button
 		document.getElementById("submit").disabled = false;
 	return true;}
 }
+/* Check for email validation*/
 function EmailValidation()
 {
 var x=document.getElementById('email');
@@ -79,11 +80,12 @@ x.value=x.value.toLowerCase();
 document.getElementById('emailAnchor').innerHTML="";
 document.getElementById('eimg').style.visibility = 'visible';
 c=c+1;
-if(c>=5)
+if(c>=5)																//if all the field fill enable 'submit' button
 		document.getElementById("submit").disabled = false;
 return true;
 }
 }
+/* Check for contact number validation */
 function numbervalidation(){
 	var x=document.the_form.cno.value;
 	var y=/^[0-9]+$/;
@@ -91,7 +93,7 @@ function numbervalidation(){
 	document.getElementById('cnoAnchor').innerHTML="";
 	document.getElementById('cimg').style.visibility = 'visible';
 	c=c+1;
-if(c>=5)
+if(c>=5)																//if all the field fill enable 'submit' button
 		document.getElementById("submit").disabled = false;
 	return true;
 	
@@ -108,7 +110,7 @@ if(c>=5)
 </head>
 <body >
 <div id="header">
-<Img src="images/logo.jpg" id="aa"/>
+<Img src="images/logo.jpg" id="logo"/>
 
 </div>
 <div id="form"  >
@@ -140,4 +142,3 @@ Address:<br><textarea rows="5" cols="60" id="haddr" onblur="myFunction(document.
 
 </body>
 </html>
-

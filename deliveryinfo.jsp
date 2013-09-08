@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%-- 
     Document   : deliveryinfo
     Created on : Aug 30, 2013, 9:36:18 AM
-    Author     : Dev
+    Author     : Dewansh
 --%>
 <!DOCTYPE html>
 
@@ -29,8 +29,8 @@ div#form{
 	padding:50px 50px;
 	background:white;
 }
-input,select#frmwr{
-	width:500px;
+input{
+	width:450px;
 }
 input#submit{
 	width:100px;
@@ -38,15 +38,15 @@ input#submit{
 </style>
 <script src="datetimepicker_css.js"></script>
 </head>
-<body background="images/a.jpg">
+<body>
 <div id="header">
 <Img src="images/logo.jpg"/>
 </div>
 <div id="form">
 <form name="the_form" action="mycontroller.do"  method="post" onSubmit="formValidation()" >
-    
+ 
 <%
-String fname=request.getParameter("fname");
+String fname=request.getParameter("fname"); // fetching the data from register.jsp 
 String lname=request.getParameter("lname");
 String email=request.getParameter("email");
 String cno=request.getParameter("cno");
@@ -57,6 +57,7 @@ String haddr=request.getParameter("haddr");
 <input type="hidden" name="email" value= "<%=email %>"/>
 <input type="hidden" name="cno" value= "<%=cno %>"/>
 <input type="hidden" name="home" value= "<%=haddr %>"/>
+
 Date and Time: <br>
 <input type="text" id="date" name="date" onclick="javascript:NewCssCal('date','ddMMyyyy','dropdown',true,12,false,'future')" ><i id="dtAnchor"></i>
 <br>
